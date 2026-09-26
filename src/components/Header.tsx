@@ -105,7 +105,7 @@ export const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-6" id="desktop-nav">
+          <nav className="hidden lg:flex items-center gap-6">
             <NavLink to="/" style={navLinkStyle}>Home</NavLink>
             
             {/* Products Dropdown */}
@@ -147,7 +147,7 @@ export const Header: React.FC = () => {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden lg:flex items-center gap-4" id="desktop-actions">
+          <div className="hidden lg:flex items-center gap-4">
             <ThemeToggle />
             <button aria-label="Search" className="btn-ghost" style={{ padding: '8px', borderRadius: '50%', border: 'none', cursor: 'pointer' }} onClick={() => setIsSearchOpen(true)}>
               <Search size={20} />
@@ -167,7 +167,7 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Mobile Actions */}
-          <div className="flex lg:hidden items-center gap-4" id="mobile-actions">
+          <div className="flex lg:hidden items-center gap-4">
             <ThemeToggle />
             <button aria-label="Search" className="btn-ghost" style={{ padding: '8px', borderRadius: '50%', border: 'none', cursor: 'pointer' }} onClick={() => setIsSearchOpen(true)}>
               <Search size={20} />
