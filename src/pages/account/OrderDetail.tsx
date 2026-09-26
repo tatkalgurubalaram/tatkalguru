@@ -51,7 +51,7 @@ export const AccountOrderDetail: React.FC = () => {
         <h2 className="section-heading" style={{ margin: 0 }}>Order #{order.orderNumber}</h2>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--space-6)', marginBottom: 'var(--space-6)' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: 'var(--space-6)', marginBottom: 'var(--space-6)' }}>
         <Card>
           <h3 className="card-heading" style={{ marginBottom: 'var(--space-4)' }}>Order Information</h3>
           <div style={{ display: 'grid', gap: 'var(--space-2)' }}>

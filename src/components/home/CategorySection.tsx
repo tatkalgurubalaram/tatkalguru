@@ -67,7 +67,7 @@ export const CategorySection: React.FC = () => {
 
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 1fr))', 
           gap: 'var(--space-6)' 
         }}>
           {categories.map((cat, i) => (

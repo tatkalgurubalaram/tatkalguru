@@ -73,7 +73,7 @@ export const Products: React.FC = () => {
         
         <CatalogSearch value={state.search} onChange={(val) => updateState({ search: val })} />
         
-        <div style={{ display: 'flex', gap: 'var(--space-8)' }}>
+        <div className="flex flex-col lg:flex-row" style={{ gap: 'var(--space-8)' }}>
           {/* Desktop Sidebar */}
           <div className="hidden lg:block" style={{ width: '280px', flexShrink: 0 }}>
             <FilterPanel state={state} updateState={updateState} />

@@ -18,7 +18,7 @@ export const WhyChooseUs: React.FC = () => {
           <h2 className="section-heading">Why Choose Our Platform?</h2>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 'var(--space-6)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 'var(--space-6)' }}>
           {features.map((feat, i) => (
             <motion.div
               key={i}

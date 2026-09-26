@@ -46,7 +46,7 @@ export const AccountOverview: React.FC = () => {
     <div>
       <h2 className="section-heading" style={{ marginBottom: 'var(--space-6)' }}>Dashboard Overview</h2>
       
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'var(--space-4)', marginBottom: 'var(--space-8)' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 'var(--space-4)', marginBottom: 'var(--space-8)' }}>
         <Card style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)' }}>
           <div style={{ padding: 'var(--space-3)', backgroundColor: 'var(--bg-light)', borderRadius: '50%' }}>
             <Package size={24} color="var(--color-primary)" />

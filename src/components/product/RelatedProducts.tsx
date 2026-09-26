@@ -14,7 +14,7 @@ export const RelatedProducts: React.FC<RelatedProductsProps> = ({ products }) =>
   return (
     <div style={{ marginTop: 'var(--space-16)', paddingTop: 'var(--space-12)', borderTop: '1px solid var(--border-light)' }}>
       <h3 className="section-heading" style={{ marginBottom: 'var(--space-6)' }}>You May Also Like</h3>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 'var(--space-6)' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(280px, 100%), 1fr))', gap: 'var(--space-6)' }}>
         {products.map((prod, i) => (
           <motion.div
             key={prod.id}

@@ -16,7 +16,7 @@ export const HowItWorks: React.FC = () => {
           <h2 className="section-heading">How It Works</h2>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'var(--space-8)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 'var(--space-8)' }}>
           {steps.map((step, i) => (
             <motion.div
               key={i}

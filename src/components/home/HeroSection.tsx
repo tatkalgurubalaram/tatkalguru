@@ -49,16 +49,16 @@ export const HeroSection: React.FC = () => {
               Welcome to TSF Group — India's trusted platform for high-speed Tatkal ticket booking software. Get advanced autofill technology, fast booking assistant tools, free demo setups, and instant license key delivery in under 10 seconds.
             </p>
             
-            <div className="flex gap-4" style={{ flexWrap: 'wrap', width: '100%' }}>
-              <Link to="/products" style={{ textDecoration: 'none' }}>
-                <Button variant="glass">DOWNLOAD SOFTWARE PLANS</Button>
+            <div className="flex flex-col sm:flex-row gap-4" style={{ width: '100%' }}>
+              <Link to="/products" className="w-full sm:w-auto" style={{ textDecoration: 'none' }}>
+                <Button variant="glass" style={{ width: '100%' }}>DOWNLOAD SOFTWARE PLANS</Button>
               </Link>
-              <Link to="/contact" style={{ textDecoration: 'none' }}>
-                <Button variant="glass-secondary">GET FREE DEMO ON TELEGRAM</Button>
+              <Link to="/contact" className="w-full sm:w-auto" style={{ textDecoration: 'none' }}>
+                <Button variant="glass-secondary" style={{ width: '100%' }}>GET FREE DEMO ON TELEGRAM</Button>
               </Link>
             </div>
 
-            <div className="flex gap-6 text-small text-muted" style={{ flexWrap: 'wrap', marginTop: 'var(--space-4)' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-small text-muted" style={{ marginTop: 'var(--space-4)' }}>
               <span className="flex items-center gap-1"><Check size={16} color="var(--color-success)" /> Digital Delivery</span>
               <span className="flex items-center gap-1"><Check size={16} color="var(--color-success)" /> Secure Checkout</span>
               <span className="flex items-center gap-1"><Check size={16} color="var(--color-success)" /> Support</span>

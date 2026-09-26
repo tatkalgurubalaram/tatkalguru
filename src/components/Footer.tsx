@@ -6,7 +6,7 @@ import { config } from '../config';
 export const Footer: React.FC = () => {
   return (
     <footer style={{ backgroundColor: 'var(--color-surface)', borderTop: '1px solid var(--border-light)', paddingTop: 'var(--space-12)', paddingBottom: 'var(--space-6)' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'var(--space-8)', marginBottom: 'var(--space-12)' }}>
+      <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 'var(--space-8)', marginBottom: 'var(--space-12)' }}>
         
         <div className="flex" style={{ flexDirection: 'column', gap: 'var(--space-4)' }}>
           <div className="flex items-center gap-2">

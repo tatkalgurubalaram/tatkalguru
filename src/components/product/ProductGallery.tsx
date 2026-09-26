@@ -41,7 +41,7 @@ export const ProductGallery: React.FC<ProductGalleryProps> = ({ image, images, p
 
       {/* Thumbnails */}
       {allImages.length > 1 && (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(80px, 1fr))', gap: 'var(--space-3)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(80px, 100%), 1fr))', gap: 'var(--space-3)' }}>
           {allImages.map((img, idx) => (
             <button
               key={idx}

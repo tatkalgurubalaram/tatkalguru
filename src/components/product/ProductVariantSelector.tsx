@@ -15,7 +15,7 @@ export const ProductVariantSelector: React.FC<ProductVariantSelectorProps> = ({ 
   return (
     <div style={{ marginBottom: 'var(--space-6)' }}>
       <label style={{ display: 'block', fontWeight: 600, marginBottom: 'var(--space-3)' }}>Choose an option</label>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 'var(--space-3)' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(140px, 100%), 1fr))', gap: 'var(--space-3)' }}>
         {variants.map(v => (
           <button
             key={v.id}

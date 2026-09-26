@@ -169,7 +169,7 @@ export const ProductDetail: React.FC = () => {
             </div>
 
             {/* Benefits */}
-            <div style={{ marginTop: 'var(--space-4)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 'var(--space-4)' }}>
+            <div style={{ marginTop: 'var(--space-4)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(150px, 100%), 1fr))', gap: 'var(--space-4)' }}>
               <div className="flex items-center gap-2 text-small text-muted">
                 <ShieldCheck size={16} color="var(--color-primary)" /> Secure checkout
               </div>

@@ -41,7 +41,7 @@ export const AdminDashboard: React.FC = () => {
     <div>
       <h1 className="section-heading" style={{ marginBottom: 'var(--space-8)' }}>Dashboard Overview</h1>
       
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 'var(--space-6)', marginBottom: 'var(--space-8)' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: 'var(--space-6)', marginBottom: 'var(--space-8)' }}>
         {statCard(<Package size={24} color="var(--color-primary)" />, 'Products', data.metrics.totalProducts)}
         {statCard(<ShoppingCart size={24} color="var(--color-primary)" />, 'Total Orders', data.metrics.totalOrders)}
         {statCard(<Users size={24} color="var(--color-primary)" />, 'Customers', data.metrics.customers)}

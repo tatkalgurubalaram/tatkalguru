@@ -8,7 +8,7 @@ export const TechnologySection: React.FC = () => {
   return (
     <section style={{ backgroundColor: 'var(--color-dark)', color: 'var(--color-surface)', padding: 'var(--space-20) 0', overflow: 'hidden' }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--space-16)', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: 'var(--space-16)', alignItems: 'center' }}>
           
           <motion.div 
             initial={{ opacity: 0, x: -20 }}

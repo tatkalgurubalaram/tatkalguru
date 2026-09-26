@@ -226,7 +226,7 @@ export const Checkout: React.FC = () => {
             
             <section style={{ backgroundColor: 'var(--color-surface)', padding: 'var(--space-6)', borderRadius: 'var(--radius-card)', border: '1px solid var(--border-light)' }}>
               <h2 className="card-heading" style={{ marginBottom: 'var(--space-6)' }}>Customer Information</h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'var(--space-4)' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 'var(--space-4)' }}>
                 <Input 
                   label="First Name" 
                   value={formData.customer.firstName} 
@@ -271,7 +271,7 @@ export const Checkout: React.FC = () => {
               </div>
 
               {!useCustomerForBilling && (
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'var(--space-4)' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: 'var(--space-4)' }}>
                   <div style={{ gridColumn: '1 / -1' }}>
                     <Input 
                       label="Address Line 1" 

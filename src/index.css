@@ -83,6 +83,16 @@
   --line-height-body: 1.6;
 }
 
+/* Base Elements Safety Net */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 @media (min-width: 640px) { /* Tablet */
   :root {
     --font-size-hero: 32px;

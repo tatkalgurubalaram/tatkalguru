@@ -13,7 +13,7 @@ export const SecuritySection: React.FC = () => {
   return (
     <section style={{ padding: 'var(--space-16) 0' }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--space-12)', alignItems: 'center', backgroundColor: 'var(--color-surface)', borderRadius: 'var(--radius-card-lg)', padding: 'var(--space-8)', border: '1px solid var(--border-light)', boxShadow: 'var(--shadow-sm)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: 'var(--space-12)', alignItems: 'center', backgroundColor: 'var(--color-surface)', borderRadius: 'var(--radius-card-lg)', padding: 'var(--space-8)', border: '1px solid var(--border-light)', boxShadow: 'var(--shadow-sm)' }}>
           
           <motion.div
             initial={{ opacity: 0, x: -20 }}
