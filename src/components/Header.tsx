@@ -146,8 +146,8 @@ export const Header: React.FC = () => {
             <NavLink to="/contact" style={navLinkStyle}>Contact</NavLink>
           </nav>
 
-          {/* Desktop Actions */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* Actions */}
+          <div className="flex items-center gap-4">
             <ThemeToggle />
             <button aria-label="Search" className="btn-ghost" style={{ padding: '8px', borderRadius: '50%', border: 'none', cursor: 'pointer' }} onClick={() => setIsSearchOpen(true)}>
               <Search size={20} />
@@ -160,29 +160,17 @@ export const Header: React.FC = () => {
                 </span>
               )}
             </button>
-            <Link to="/account" aria-label="Account" className="btn-ghost" style={{ padding: '8px', borderRadius: 'var(--radius-sm)', border: 'none', cursor: 'pointer', color: 'inherit', display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
+            
+            {/* Desktop only */}
+            <Link to="/account" aria-label="Account" className="hidden lg:flex btn-ghost items-center gap-2" style={{ padding: '8px', borderRadius: 'var(--radius-sm)', border: 'none', cursor: 'pointer', color: 'inherit', textDecoration: 'none' }}>
               <User size={20} />
               {user && <span style={{ fontSize: '14px', fontWeight: 600 }}>Hi, {user.firstName}</span>}
             </Link>
-          </div>
 
-          {/* Mobile Actions */}
-          <div className="flex lg:hidden items-center gap-4">
-            <ThemeToggle />
-            <button aria-label="Search" className="btn-ghost" style={{ padding: '8px', borderRadius: '50%', border: 'none', cursor: 'pointer' }} onClick={() => setIsSearchOpen(true)}>
-              <Search size={20} />
-            </button>
-            <button aria-label="Cart" className="btn-ghost relative" style={{ padding: '8px', borderRadius: '50%', border: 'none', cursor: 'pointer', color: 'inherit' }} onClick={() => setIsDrawerOpen(true)}>
-              <ShoppingCart size={20} />
-              {totalQuantity > 0 && (
-                <span style={{ position: 'absolute', top: '0', right: '0', backgroundColor: 'var(--color-primary)', color: 'white', fontSize: '11px', fontWeight: 700, width: '16px', height: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}>
-                  {totalQuantity}
-                </span>
-              )}
-            </button>
+            {/* Mobile only */}
             <button 
               aria-label="Menu"
-              className="btn-ghost" 
+              className="lg:hidden btn-ghost" 
               style={{ padding: '8px', borderRadius: '50%', border: 'none', cursor: 'pointer' }}
               onClick={() => setIsMobileMenuOpen(true)}
             >

@@ -74,7 +74,7 @@
   /* Typography scale */
   --font-family: 'Inter', sans-serif;
   
-  --font-size-hero: 30px;
+  --font-size-hero: 28px;
   --font-size-section: 32px;
   --font-size-card: 18px;
   --font-size-body: 16px;
@@ -85,13 +85,13 @@
 
 @media (min-width: 640px) { /* Tablet */
   :root {
-    --font-size-hero: 40px;
+    --font-size-hero: 32px;
   }
 }
 
 @media (min-width: 1024px) { /* Desktop */
   :root {
-    --font-size-hero: 48px;
+    --font-size-hero: 38px;
     --font-size-section: 42px;
     --font-size-card: 22px;
   }
