@@ -1,3 +1,3 @@
 export const config = {
-  brandName: 'TatkalFast',
+  brandName: 'Tatkal GURU Balaram',
 };
