@@ -12,11 +12,11 @@ export const HeroSection: React.FC = () => {
   return (
     <section style={{ backgroundColor: 'var(--color-bg)', position: 'relative', overflow: 'hidden', padding: 'var(--space-16) 0' }}>
       <div className="container">
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: 'var(--space-8) 0' }}>
+        <div style={{ padding: 'var(--space-8) 0' }}>
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--space-8)', maxWidth: '800px', width: '100%' }}
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', gap: 'var(--space-8)', maxWidth: '800px', width: '100%' }}
           >
             <div>
               <p className="text-small" style={{ color: 'var(--color-primary)', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', marginBottom: 'var(--space-4)' }}>
@@ -31,7 +31,7 @@ export const HeroSection: React.FC = () => {
               Welcome to TSF Group — India's trusted platform for high-speed Tatkal ticket booking software. Get advanced autofill technology, fast booking assistant tools, free demo setups, and instant license key delivery in under 10 seconds.
             </p>
             
-            <div className="flex gap-4 justify-center" style={{ flexWrap: 'wrap', width: '100%' }}>
+            <div className="flex gap-4" style={{ flexWrap: 'wrap', width: '100%' }}>
               <Link to="/products" style={{ textDecoration: 'none' }}>
                 <Button variant="primary">DOWNLOAD SOFTWARE PLANS</Button>
               </Link>
@@ -40,7 +40,7 @@ export const HeroSection: React.FC = () => {
               </Link>
             </div>
 
-            <div className="flex gap-6 justify-center text-small text-muted" style={{ flexWrap: 'wrap', marginTop: 'var(--space-4)' }}>
+            <div className="flex gap-6 text-small text-muted" style={{ flexWrap: 'wrap', marginTop: 'var(--space-4)' }}>
               <span className="flex items-center gap-1"><Check size={16} color="var(--color-success)" /> Digital Delivery</span>
               <span className="flex items-center gap-1"><Check size={16} color="var(--color-success)" /> Secure Checkout</span>
               <span className="flex items-center gap-1"><Check size={16} color="var(--color-success)" /> Support</span>
