@@ -4,6 +4,7 @@ import { Button } from '../ui/Button';
 import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
+import heroBg from '../../assets/image.png';
 
 export const HeroSection: React.FC = () => {
   const { theme } = useTheme();
@@ -11,7 +12,19 @@ export const HeroSection: React.FC = () => {
 
   return (
     <section style={{ backgroundColor: 'var(--color-bg)', position: 'relative', overflow: 'hidden', padding: 'var(--space-16) 0' }}>
-      <div className="container">
+      {/* Background Image Overlay */}
+      <div 
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: isDark ? 0.35 : 0.15,
+          zIndex: 0
+        }}
+      />
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{ padding: 'var(--space-8) 0' }}>
           
           <motion.div 
