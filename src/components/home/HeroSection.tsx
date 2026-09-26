@@ -4,7 +4,7 @@ import { Button } from '../ui/Button';
 import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
-import heroBg from '../../assets/image.png';
+import heroBg from '../../assets/hero-bg.png';
 
 export const HeroSection: React.FC = () => {
   const { theme } = useTheme();
