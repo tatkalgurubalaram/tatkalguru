@@ -23,20 +23,20 @@ export const HeroSection: React.FC = () => {
                 Digital Marketplace
               </p>
               <h1 className="hero-heading" style={{ color: 'var(--text-heading)' }}>
-                Everything You Need.<br />Delivered Digitally.
+                Best Tatkal Software for Fast IRCTC Ticket Booking in India
               </h1>
             </div>
             
-            <p className="text-body text-muted" style={{ fontSize: '18px', maxWidth: '500px', lineHeight: 1.6 }}>
-              Explore software, server solutions and digital services through one modern marketplace built for speed and simplicity.
+            <p className="text-body text-muted" style={{ fontSize: '18px', maxWidth: '600px', lineHeight: 1.6 }}>
+              Welcome to TSF Group — India's trusted platform for high-speed Tatkal ticket booking software. Get advanced autofill technology, fast booking assistant tools, free demo setups, and instant license key delivery in under 10 seconds.
             </p>
             
             <div className="flex gap-4" style={{ flexWrap: 'wrap' }}>
               <Link to="/products" style={{ textDecoration: 'none' }}>
-                <Button variant="primary">Explore Products</Button>
+                <Button variant="primary">DOWNLOAD SOFTWARE PLANS</Button>
               </Link>
-              <Link to="/about" style={{ textDecoration: 'none' }}>
-                <Button variant="secondary">Learn More</Button>
+              <Link to="/contact" style={{ textDecoration: 'none' }}>
+                <Button variant="secondary">GET FREE DEMO ON TELEGRAM</Button>
               </Link>
             </div>
 
