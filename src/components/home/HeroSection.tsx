@@ -40,7 +40,7 @@ export const HeroSection: React.FC = () => {
               <p className="text-small" style={{ color: 'var(--color-primary)', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', marginBottom: 'var(--space-4)' }}>
                 Digital Marketplace
               </p>
-              <h1 className="hero-heading" style={{ color: 'var(--text-heading)', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', lineHeight: 1.2 }}>
+              <h1 className="hero-heading" style={{ color: isDark ? '#F1F0F0' : 'var(--text-heading)', fontFamily: '"Lato", sans-serif', fontSize: '30px', lineHeight: 1.2 }}>
                 Best Tatkal Software for Fast IRCTC Ticket Booking in India
               </h1>
             </div>
