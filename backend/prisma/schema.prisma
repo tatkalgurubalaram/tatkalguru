@@ -1,0 +1,151 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String         @id @default(uuid())
+  email         String         @unique
+  passwordHash  String
+  firstName     String
+  lastName      String
+  phone         String
+  role          String         @default("USER") // USER, ADMIN
+  status        String         @default("ACTIVE") // ACTIVE, SUSPENDED
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  orders        Order[]
+  refreshTokens RefreshToken[]
+}
+
+model RefreshToken {
+  id                String   @id @default(uuid())
+  userId            String
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash         String   @unique
+  expiresAt         DateTime
+  revokedAt         DateTime?
+  replacedByTokenId String?
+  createdAt         DateTime @default(now())
+}
+
+model Order {
+  id                String      @id @default(uuid())
+  orderNumber       String      @unique
+  userId            String?
+  user              User?       @relation(fields: [userId], references: [id], onDelete: SetNull)
+  customerFirstName String
+  customerLastName  String
+  customerEmail     String
+  customerPhone     String
+  billingAddress1   String
+  billingAddress2   String?
+  billingCity       String
+  billingState      String
+  billingPostalCode String
+  billingCountry    String
+  subtotal          Int
+  discount          Int
+  total             Int
+  currency          String      @default("INR")
+  status            String      @default("PENDING") // PENDING, CONFIRMED, CANCELLED
+  paymentStatus     String      @default("UNPAID") // UNPAID, PENDING, PAID, FAILED
+  paymentMethod     String
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+  items             OrderItem[]
+  payments          Payment[]
+  licenses          License[]
+  deliveries        DigitalDelivery[]
+}
+
+model Payment {
+  id                String   @id @default(uuid())
+  orderId           String
+  order             Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  provider          String   @default("razorpay")
+  providerOrderId   String?
+  providerPaymentId String?
+  amount            Int
+  currency          String   @default("INR")
+  status            String   @default("CREATED") // CREATED, PENDING, AUTHORIZED, CAPTURED, FAILED
+  method            String?
+  signatureVerified Boolean  @default(false)
+  paidAt            DateTime?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model OrderItem {
+  id          String   @id @default(uuid())
+  orderId     String
+  order       Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId   String
+  productSlug String
+  productName String
+  variantId   String?
+  variantName String?
+  quantity    Int
+  unitPrice   Int
+  lineTotal   Int
+  createdAt   DateTime @default(now())
+
+  licenses    License[]
+  deliveries  DigitalDelivery[]
+}
+
+model License {
+  id          String   @id @default(uuid())
+  licenseKey  String   @unique
+  orderId     String
+  order       Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderItemId String
+  orderItem   OrderItem @relation(fields: [orderItemId], references: [id], onDelete: Cascade)
+  productId   String
+  variantId   String?
+  status      String   @default("ACTIVE") // ACTIVE, REVOKED, EXPIRED
+  issuedAt    DateTime @default(now())
+  expiresAt   DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model DigitalDelivery {
+  id               String   @id @default(uuid())
+  deliveryToken    String   @unique
+  orderId          String
+  order            Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderItemId      String
+  orderItem        OrderItem @relation(fields: [orderItemId], references: [id], onDelete: Cascade)
+  licenseId        String?
+  productId        String
+  digitalAssetId   String?
+  digitalAsset     DigitalAsset? @relation(fields: [digitalAssetId], references: [id], onDelete: SetNull)
+  status           String   @default("AVAILABLE") // PENDING, AVAILABLE, FAILED, REVOKED, EXPIRED
+  downloadCount    Int      @default(0)
+  lastDownloadedAt DateTime?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model DigitalAsset {
+  id          String   @id @default(uuid())
+  productId   String   @unique
+  fileName    String
+  storageKey  String   @unique
+  mimeType    String
+  fileSize    Int?
+  version     String?
+  status      String   @default("ACTIVE") // ACTIVE, INACTIVE
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  deliveries  DigitalDelivery[]
+}
+
