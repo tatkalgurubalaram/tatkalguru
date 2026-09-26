@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export const WhatsAppButton: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const whatsappUrl = 'https://wa.me/916296579165';
+  const whatsappUrl = 'https://wa.me/919040706311';
 
   return (
     <div 
