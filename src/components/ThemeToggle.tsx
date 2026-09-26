@@ -16,7 +16,6 @@ export const ThemeToggle: React.FC = () => {
         borderRadius: '50%',
         border: 'none',
         cursor: 'pointer',
-        color: 'inherit',
         width: '36px',
         height: '36px'
       }}

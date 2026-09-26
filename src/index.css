@@ -89,7 +89,7 @@ img, video {
   height: auto;
 }
 
-img, video { max-width: 100%; height: auto; }`n`nbody { overflow-x: hidden;
+body {
   overflow-x: hidden;
 }
 
@@ -113,7 +113,7 @@ img, video { max-width: 100%; height: auto; }`n`nbody { overflow-x: hidden;
   padding: 0;
 }
 
-img, video { max-width: 100%; height: auto; }`n`nbody { overflow-x: hidden;
+body {
   font-family: var(--font-family);
   background-color: var(--color-bg);
   color: var(--text-body);
@@ -561,7 +561,7 @@ html.dark {
   --color-info-light: rgba(59, 130, 246, 0.2);
 }
 
-img, video { max-width: 100%; height: auto; }`n`nbody { overflow-x: hidden;
+body {
   transition: background-color 250ms ease, color 250ms ease;
 }
 
