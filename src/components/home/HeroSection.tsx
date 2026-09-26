@@ -33,10 +33,10 @@ export const HeroSection: React.FC = () => {
             
             <div className="flex gap-4" style={{ flexWrap: 'wrap', width: '100%' }}>
               <Link to="/products" style={{ textDecoration: 'none' }}>
-                <Button variant="primary">DOWNLOAD SOFTWARE PLANS</Button>
+                <Button variant="glass">DOWNLOAD SOFTWARE PLANS</Button>
               </Link>
               <Link to="/contact" style={{ textDecoration: 'none' }}>
-                <Button variant="secondary">GET FREE DEMO ON TELEGRAM</Button>
+                <Button variant="glass-secondary">GET FREE DEMO ON TELEGRAM</Button>
               </Link>
             </div>
 

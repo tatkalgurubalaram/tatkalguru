@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import type { HTMLMotionProps } from 'framer-motion';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'dark' | 'danger' | 'ghost' | 'outline';
+export type ButtonVariant = 'primary' | 'secondary' | 'dark' | 'danger' | 'ghost' | 'outline' | 'glass' | 'glass-secondary';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
