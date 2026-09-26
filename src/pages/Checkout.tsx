@@ -219,7 +219,7 @@ export const Checkout: React.FC = () => {
           <span>Confirmation</span>
         </div>
 
-        <form onSubmit={handleSubmit} style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 'var(--space-8)' }} className="lg:grid-cols-12">
+        <form onSubmit={handleSubmit} style={{ gap: 'var(--space-8)' }} className="grid grid-cols-1 lg:grid-cols-12">
           
           {/* Main Form Area */}
           <div className="lg:col-span-7 xl:col-span-8" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>

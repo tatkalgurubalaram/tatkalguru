@@ -34,7 +34,7 @@ export const HowItWorks: React.FC = () => {
               
               {/* Connector Line (desktop only, handled via CSS roughly) */}
               {i < steps.length - 1 && (
-                <div style={{ display: 'none' }} className="hidden lg:block absolute top-12 left-[60%] w-[80%] h-[2px] bg-border-light" />
+                <div className="hidden lg:block absolute top-12 left-[60%] w-[80%] h-[2px] bg-[var(--border-light)]" />
               )}
             </motion.div>
           ))}

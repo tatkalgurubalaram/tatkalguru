@@ -87,7 +87,7 @@ export const ProductDetail: React.FC = () => {
           />
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 'var(--space-12)', marginTop: 'var(--space-6)' }} className="lg:grid-cols-2">
+        <div style={{ gap: 'var(--space-12)', marginTop: 'var(--space-6)' }} className="grid grid-cols-1 lg:grid-cols-2">
           {/* Left: Gallery */}
           <div>
             <ProductGallery image={product.image} images={product.images} productName={product.name} />

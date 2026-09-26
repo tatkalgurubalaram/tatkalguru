@@ -12,13 +12,14 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 
 // Use Framer Motion for button interactions
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className = '', variant = 'primary', isLoading, children, disabled, ...props }, ref) => {
+  ({ className = '', variant = 'primary', size, isLoading, children, disabled, ...props }, ref) => {
+    const sizeClass = size ? `btn-${size}` : '';
     return (
       <motion.button
         ref={ref}
         whileHover={{ scale: disabled || isLoading ? 1 : 1.02 }}
         whileTap={{ scale: disabled || isLoading ? 1 : 0.98 }}
-        className={`btn btn-${variant} ${className}`}
+        className={`btn btn-${variant} ${sizeClass} ${className}`}
         disabled={disabled || isLoading}
         {...(props as HTMLMotionProps<"button">)}
       >

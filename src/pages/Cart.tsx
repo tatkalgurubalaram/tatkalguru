@@ -38,7 +38,7 @@ export const Cart: React.FC = () => {
             </Link>
           </div>
         ) : (
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 'var(--space-8)', marginTop: 'var(--space-8)' }} className="lg:grid-cols-3">
+          <div style={{ gap: 'var(--space-8)', marginTop: 'var(--space-8)' }} className="grid grid-cols-1 lg:grid-cols-3">
             {/* Cart Items */}
             <div className="lg:col-span-2" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
               <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 'var(--space-2)' }}>

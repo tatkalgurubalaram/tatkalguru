@@ -46,21 +46,8 @@ export const AccountLayout: React.FC = () => {
         ]} 
       />
       
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 'var(--space-8)', marginTop: 'var(--space-8)' }}>
-        <style>{`
-          .account-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-8);
-          }
-          @media(min-width: 768px) {
-            .account-grid {
-              grid-template-columns: 250px 1fr;
-            }
-          }
-        `}</style>
-        
-        <div className="account-grid">
+      <div style={{ marginTop: 'var(--space-8)' }}>
+        <div className="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-8">
           {/* Sidebar */}
           <nav>
             <NavLink to="/account" end style={navLinkStyle}>Overview</NavLink>

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+
 :root {
   /* Colors - Primary */
   --color-primary: #2563EB;
@@ -239,6 +240,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-ghost:hover:not(:disabled) {
   background-color: var(--color-bg);
+}
+
+.btn-sm {
+  height: 36px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.btn-lg {
+  height: 56px;
+  padding: 0 32px;
+  font-size: 18px;
 }
 
 .btn-glass {
@@ -615,3 +628,5 @@ html.dark .glass-card:hover::before {
   pointer-events: none;
   z-index: 1;
 }
+
+

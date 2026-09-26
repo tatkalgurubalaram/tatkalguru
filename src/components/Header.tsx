@@ -105,11 +105,11 @@ export const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="flex items-center gap-6" style={{ display: 'none' }} id="desktop-nav">
+          <nav className="hidden lg:flex items-center gap-6" id="desktop-nav">
             <NavLink to="/" style={navLinkStyle}>Home</NavLink>
             
             {/* Products Dropdown */}
-            <div className="relative" ref={dropdownRef} style={{ position: 'relative' }}>
+            <div className="relative" ref={dropdownRef}>
               <button 
                 className="flex items-center gap-1"
                 style={{ 
@@ -147,7 +147,7 @@ export const Header: React.FC = () => {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="flex items-center gap-4" style={{ display: 'none' }} id="desktop-actions">
+          <div className="hidden lg:flex items-center gap-4" id="desktop-actions">
             <ThemeToggle />
             <button aria-label="Search" className="btn-ghost" style={{ padding: '8px', borderRadius: '50%', border: 'none', cursor: 'pointer' }} onClick={() => setIsSearchOpen(true)}>
               <Search size={20} />
@@ -167,7 +167,7 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Mobile Actions */}
-          <div className="flex items-center gap-4" id="mobile-actions">
+          <div className="flex lg:hidden items-center gap-4" id="mobile-actions">
             <ThemeToggle />
             <button aria-label="Search" className="btn-ghost" style={{ padding: '8px', borderRadius: '50%', border: 'none', cursor: 'pointer' }} onClick={() => setIsSearchOpen(true)}>
               <Search size={20} />
@@ -249,12 +249,12 @@ export const Header: React.FC = () => {
               </button>
             </div>
             
-            <nav className="flex" style={{ flexDirection: 'column', gap: 'var(--space-4)' }}>
+            <nav className="flex flex-col gap-4">
               <Link to="/" style={{ color: 'var(--text-heading)', textDecoration: 'none', fontWeight: 600, fontSize: '18px' }}>Home</Link>
               
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+              <div className="flex flex-col gap-2">
                 <Link to="/products" style={{ color: 'var(--text-heading)', textDecoration: 'none', fontWeight: 600, fontSize: '18px' }}>Products</Link>
-                <div className="flex" style={{ flexDirection: 'column', gap: 'var(--space-2)', paddingLeft: 'var(--space-4)' }}>
+                <div className="flex flex-col gap-2 pl-4">
                   <Link to="/products/software" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontWeight: 500 }}>Software</Link>
                   <Link to="/products/vps" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontWeight: 500 }}>VPS Server</Link>
                   <Link to="/products/proxy" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontWeight: 500 }}>Proxy</Link>
@@ -269,13 +269,6 @@ export const Header: React.FC = () => {
           </div>
         </div>
       )}
-      <style>{`
-        @media(min-width: 1024px) {
-          #desktop-nav { display: flex !important; }
-          #desktop-actions { display: flex !important; }
-          #mobile-actions { display: none !important; }
-        }
-      `}</style>
     </>
   );
 };
