@@ -718,41 +718,28 @@ html.dark .glass-card:hover::before {
     background: linear-gradient(
       to right,
       var(--color-bg) 0%,
-      var(--color-bg) 40%,
-      color-mix(in srgb, var(--color-bg) 80%, transparent) 55%,
-      color-mix(in srgb, var(--color-bg) 30%, transparent) 75%,
+      var(--color-bg) 55%,
+      color-mix(in srgb, var(--color-bg) 70%, transparent) 75%,
       transparent 100%
     );
-  
   }
-}
-@media (max-width: 767px) {
+  
   .hero-background-art {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    width: clamp(40%, 48vw, 55%);
+    width: clamp(45%, 50vw, 55%);
     height: 100%;
     object-fit: cover;
     object-position: center;
-  }
-}
-@media (max-width: 767px) {
-  .hero-background-art {
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
-    mask-image: linear-gradient(to right, transparent 0%, black 40%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 15%, black 60%, black 100%);
+    mask-image: linear-gradient(to right, transparent 0%, transparent 15%, black 60%, black 100%);
   }
   
   .whatsapp-float {
     left: auto !important;
     right: 20px !important;
     bottom: 20px !important;
-  }
-}
-@media (max-width: 767px) {
-  .hero-background-art {
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 10%, black 60%, black 100%);
-    mask-image: linear-gradient(to right, transparent 0%, transparent 10%, black 60%, black 100%);
   }
 }
