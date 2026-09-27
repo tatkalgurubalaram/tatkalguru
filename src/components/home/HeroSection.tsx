@@ -34,16 +34,16 @@ export const HeroSection: React.FC = () => {
           position: 'absolute',
           inset: 0,
           backgroundImage: `url(${mobileHeroBg})`,
-          backgroundSize: 'auto 100%',
-          backgroundPosition: 'right center',
-          opacity: isDark ? 0.55 : 0.35,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center right',
+          opacity: isDark ? 0.85 : 0.65,
           zIndex: 0
         }}
       />
       
       {/* Responsive Gradient Overlay */}
       <div 
-        className="absolute inset-0 z-0 bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_40%,transparent_95%)] md:bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_55%,transparent_90%)] lg:bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_40%,transparent_75%)]"
+        className="absolute inset-0 z-0 bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_30%,transparent_90%)] md:bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_55%,transparent_90%)] lg:bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_40%,transparent_75%)]"
       />
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{ padding: 'var(--space-8) 0' }}>
