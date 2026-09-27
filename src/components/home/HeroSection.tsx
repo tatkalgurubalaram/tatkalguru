@@ -32,17 +32,8 @@ export const HeroSection: React.FC = () => {
         <img 
           src={mobileHeroBg} 
           alt=""
-          style={{
-            position: 'absolute',
-            right: '-25%', /* Shift slightly right to ensure character is on the right side */
-            top: 0,
-            height: '100%',
-            width: 'auto',
-            maxWidth: 'none',
-            objectFit: 'cover',
-            objectPosition: 'center',
-            opacity: isDark ? 0.85 : 0.65,
-          }}
+          className="hero-background-art"
+          style={{ opacity: isDark ? 0.9 : 0.7 }}
         />
       </div>
       
