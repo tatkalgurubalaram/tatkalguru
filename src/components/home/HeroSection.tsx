@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import heroBg from '../../assets/hero-bg.png';
+import mobileHeroBg from '../../assets/image.png';
 
 export const HeroSection: React.FC = () => {
   const { theme } = useTheme();
@@ -27,18 +28,23 @@ export const HeroSection: React.FC = () => {
       />
       
       {/* Mobile Background Image Layer */}
-      <div 
-        className="block md:hidden"
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: 'auto 100%',
-          backgroundPosition: 'right center',
-          opacity: isDark ? 0.75 : 0.5,
-          zIndex: 0
-        }}
-      />
+      <div className="block md:hidden absolute inset-0 z-0 overflow-hidden">
+        <img 
+          src={mobileHeroBg} 
+          alt=""
+          style={{
+            position: 'absolute',
+            right: '-25%', /* Shift slightly right to ensure character is on the right side */
+            top: 0,
+            height: '100%',
+            width: 'auto',
+            maxWidth: 'none',
+            objectFit: 'cover',
+            objectPosition: 'center',
+            opacity: isDark ? 0.85 : 0.65,
+          }}
+        />
+      </div>
       
       {/* Responsive Gradient Overlay */}
       <div 
