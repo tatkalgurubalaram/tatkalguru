@@ -738,3 +738,21 @@ html.dark .glass-card:hover::before {
     object-position: center;
   }
 }
+@media (max-width: 767px) {
+  .hero-background-art {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+    mask-image: linear-gradient(to right, transparent 0%, black 40%);
+  }
+  
+  .whatsapp-float {
+    left: auto !important;
+    right: 20px !important;
+    bottom: 20px !important;
+  }
+}
+@media (max-width: 767px) {
+  .hero-background-art {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 10%, black 60%, black 100%);
+    mask-image: linear-gradient(to right, transparent 0%, transparent 10%, black 60%, black 100%);
+  }
+}
