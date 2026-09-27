@@ -99,7 +99,7 @@ export const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2" style={{ textDecoration: 'none' }}>
             <Zap color="var(--color-primary)" size={28} />
-            <span style={{ fontSize: '22px', fontWeight: 800, letterSpacing: '-0.5px', color: 'var(--text-heading)' }}>
+            <span className="header-brand-name">
               {config.brandName}
             </span>
           </Link>

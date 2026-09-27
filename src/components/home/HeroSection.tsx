@@ -74,8 +74,7 @@ export const HeroSection: React.FC = () => {
                 <Button variant="glass-secondary" style={{ width: '100%' }}>GET FREE DEMO ON TELEGRAM</Button>
               </Link>
             </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-small text-muted" style={{ marginTop: 'var(--space-4)' }}>
+            <div className="hero-features flex flex-col sm:flex-row gap-4 sm:gap-6 text-small text-muted" style={{ marginTop: 'var(--space-4)' }}>
               <span className="flex items-center gap-1"><Check size={16} color="var(--color-success)" /> Digital Delivery</span>
               <span className="flex items-center gap-1"><Check size={16} color="var(--color-success)" /> Secure Checkout</span>
               <span className="flex items-center gap-1"><Check size={16} color="var(--color-success)" /> Support</span>

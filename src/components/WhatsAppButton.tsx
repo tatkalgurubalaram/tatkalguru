@@ -7,14 +7,7 @@ export const WhatsAppButton: React.FC = () => {
 
   return (
     <div 
-      style={{
-        position: 'fixed',
-        bottom: '30px',
-        left: '30px',
-        zIndex: 9999,
-        display: 'flex',
-        alignItems: 'center'
-      }}
+      className="whatsapp-float"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
