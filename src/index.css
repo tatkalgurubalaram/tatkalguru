@@ -713,3 +713,13 @@ html.dark .glass-card:hover::before {
     line-height: 1.1;
   }
 }
+@media (max-width: 767px) {
+  .mobile-hero-gradient {
+    background: linear-gradient(
+      to right,
+      var(--color-bg) 0%,
+      color-mix(in srgb, var(--color-bg) 80%, transparent) 55%,
+      color-mix(in srgb, var(--color-bg) 15%, transparent) 100%
+    );
+  }
+}

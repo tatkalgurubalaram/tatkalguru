@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import heroBg from '../../assets/hero-bg.png';
-import mobileHeroBg from '../../assets/image.png';
 
 export const HeroSection: React.FC = () => {
   const { theme } = useTheme();
@@ -33,17 +32,17 @@ export const HeroSection: React.FC = () => {
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: `url(${mobileHeroBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center right',
-          opacity: isDark ? 0.85 : 0.65,
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: 'auto 100%',
+          backgroundPosition: 'right center',
+          opacity: isDark ? 0.75 : 0.5,
           zIndex: 0
         }}
       />
       
       {/* Responsive Gradient Overlay */}
       <div 
-        className="absolute inset-0 z-0 bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_30%,transparent_90%)] md:bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_55%,transparent_90%)] lg:bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_40%,transparent_75%)]"
+        className="mobile-hero-gradient absolute inset-0 z-0 md:bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_55%,transparent_90%)] lg:bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_40%,transparent_75%)]"
       />
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{ padding: 'var(--space-8) 0' }}>
