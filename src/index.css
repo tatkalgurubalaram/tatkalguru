@@ -728,14 +728,14 @@ html.dark .glass-card:hover::before {
   .hero-background-art {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -50%;
     bottom: 0;
-    width: clamp(45%, 50vw, 55%);
+    width: 180%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 10%, black 40%, black 100%);
-    mask-image: linear-gradient(to right, transparent 0%, transparent 10%, black 40%, black 100%);
+    object-position: left center;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 30%, black 60%, black 100%);
+    mask-image: linear-gradient(to right, transparent 0%, transparent 30%, black 60%, black 100%);
   }
   
   .whatsapp-float {
