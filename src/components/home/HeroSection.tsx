@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import heroBg from '../../assets/hero-bg.png';
+import mobileHeroBg from '../../assets/image.png';
 
 export const HeroSection: React.FC = () => {
   const { theme } = useTheme();
@@ -12,14 +13,29 @@ export const HeroSection: React.FC = () => {
 
   return (
     <section style={{ backgroundColor: 'var(--color-bg)', position: 'relative', overflow: 'hidden', padding: 'var(--space-16) 0' }}>
-      {/* Background Image Layer */}
+      {/* Desktop Background Image Layer */}
       <div 
+        className="hidden md:block"
         style={{
           position: 'absolute',
           inset: 0,
           backgroundImage: `url(${heroBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'right center',
+          opacity: isDark ? 0.45 : 0.25,
+          zIndex: 0
+        }}
+      />
+      
+      {/* Mobile Background Image Layer */}
+      <div 
+        className="block md:hidden"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: `url(${mobileHeroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           opacity: isDark ? 0.45 : 0.25,
           zIndex: 0
         }}
