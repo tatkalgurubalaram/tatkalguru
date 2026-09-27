@@ -97,9 +97,9 @@ export const Header: React.FC = () => {
       >
         <div className="container flex items-center justify-between" style={{ height: '100%' }}>
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2" style={{ textDecoration: 'none' }}>
-            <Zap color="var(--color-primary)" size={28} />
-            <span className="header-brand-name">
+          <Link to="/" className="flex items-center gap-1.5 sm:gap-2 flex-shrink min-w-0" style={{ textDecoration: 'none' }}>
+            <Zap color="var(--color-primary)" className="w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] flex-shrink-0" />
+            <span className="header-brand-name truncate flex-shrink min-w-0">
               {config.brandName}
             </span>
           </Link>
@@ -147,7 +147,7 @@ export const Header: React.FC = () => {
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
             <ThemeToggle />
             <button aria-label="Search" className="btn-ghost" style={{ padding: '6px', borderRadius: '50%', border: 'none', cursor: 'pointer' }} onClick={() => setIsSearchOpen(true)}>
               <Search size={20} />
