@@ -33,7 +33,7 @@ export const HeroSection: React.FC = () => {
           src={mobileHeroBg} 
           alt=""
           className="hero-background-art"
-          style={{ opacity: isDark ? 0.9 : 0.7 }}
+          style={{ opacity: isDark ? 1 : 0.85 }}
         />
       </div>
       
