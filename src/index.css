@@ -639,3 +639,43 @@ html.dark .glass-card:hover::before {
 }
 
 
+
+
+.hero-content {
+  width: 100%;
+  max-width: 800px;
+}
+/* Responsive Typography Fixes for Mobile Hero Section */
+@media (max-width: 767px) {
+  .hero-content {
+    width: calc(100% - 32px);
+    max-width: 343.6px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .hero-content h1,
+  .hero-content p,
+  h1.elementor-heading-title,
+  .hero-description {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  h1.elementor-heading-title {
+    font-family: "Lato", sans-serif;
+    font-size: 30px;
+    line-height: 1.18;
+    color: #F1F0F0;
+    overflow-wrap: break-word;
+  }
+
+  .hero-description {
+    font-family: "Lato", sans-serif;
+    font-size: 14.592px;
+    line-height: 1.5;
+    color: #F0E8E8;
+    margin-bottom: 23.3472px;
+  }
+}

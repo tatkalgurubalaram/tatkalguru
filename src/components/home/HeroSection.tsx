@@ -34,18 +34,19 @@ export const HeroSection: React.FC = () => {
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-            style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', gap: 'var(--space-8)', maxWidth: '800px', width: '100%' }}
+            className="hero-content"
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', gap: 'var(--space-8)' }}
           >
             <div>
               <p className="text-small" style={{ color: 'var(--color-primary)', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', marginBottom: 'var(--space-4)' }}>
                 Digital Marketplace
               </p>
-              <h1 className="hero-heading" style={{ color: '#F1F0F0', fontFamily: '"Lato", sans-serif', fontSize: '30px', lineHeight: 1.2 }}>
+              <h1 className="hero-heading elementor-heading-title">
                 Best Tatkal Software for Fast IRCTC Ticket Booking in India
               </h1>
             </div>
             
-            <p className="text-body text-muted" style={{ color: '#F0E8E8', fontFamily: '"Lato", sans-serif', fontSize: '14.592px', margin: '0px 0px 23.3472px', maxWidth: '680px', lineHeight: 1.6 }}>
+            <p className="hero-description text-body text-muted">
               Welcome to TSF Group — India's trusted platform for high-speed Tatkal ticket booking software. Get advanced autofill technology, fast booking assistant tools, free demo setups, and instant license key delivery in under 10 seconds.
             </p>
             
